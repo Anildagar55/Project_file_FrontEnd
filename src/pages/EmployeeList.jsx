@@ -20,7 +20,7 @@ const EmployeeList = () => {
     setLoading(true);
 
     try {
-      const response = await axios.get("https://your-backend-name.onrender.com/api/employees");
+      const response = await axios.get("https://project-file-backend-1.onrender.com/api/employees");
       setEmployees(response.data);
     } catch {
       setError("Error fetching employee data");
@@ -31,7 +31,7 @@ const EmployeeList = () => {
 
   const deleteNotes = async (id) => {
     try {
-      await axios.delete(`https://your-backend-name.onrender.com/api/employees/delete/${id}`);
+      await axios.delete(`https://project-file-backend-1.onrender.com/api/employees/delete/${id}`);
 
       setEmployees(prev =>
         prev.filter(emp => emp.id !== id)
@@ -58,7 +58,7 @@ const EmployeeList = () => {
     try {
 
       await axios.put(
-        `https://your-backend-name.onrender.com/api/employees/update/${editId}`,
+        `https://project-file-backend-1.onrender.com/api/employees/update/${editId}`,
         editData
       );
 
