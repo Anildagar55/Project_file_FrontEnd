@@ -18,7 +18,7 @@ const CreateEmployee =()=>{
     const handleSubmit=async(e)=>{
         e.preventDefault();
         try{
-            const response=await axios.post('/api/employees',employee);
+            const response=await axios.post('https://your-backend-name.onrender.com/api/employees',employee);
             setMessage('Employee Created Successfully');
             setEmployee({
                            name:"",
